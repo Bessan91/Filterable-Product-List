@@ -5,16 +5,11 @@ import ProductList from "./components/ProductList";
 const App = () => {
   //==============================Create the data =============================
   const products = [
-    { name: "Laptop", category: "Electronics", price: 999 ,only: "Only 10 item left" },
+   
     { name: "Smartphone", category: "Electronics", price: 699, only: "Only 20 item left" },
     { name: "Headphones", category: "Electronics", price: 199 ,only: "Only 30 item left" },
-    { name: "Jeans", category: "Clothing", price: 49 ,only: "Only 2 item left"},
-    { name: "T-shirt", category: "Clothing", price: 19 ,only: "Only 7 item left"},
     { name: "Jacket", category: "Clothing", price: 99, only: "Only 8 item left" },
-    { name: "Photo Frames", category: "HomeDecor", price: 15 ,only: "Only 6 item left"},
-    { name: "Childrens Room Decor", category: "HomeDecor", price: 200 ,only: "Only 11 item left"},
-    { name: "Vases", category: "HomeDecor", price: 49 ,only: "Only 15 item left"},
-    { name: "Prints", category: "HomeDecor", price: 10 ,only: "Only 18 item left" },
+  
   ];
 
   const [activeFilter, setActiveFilter] = useState("All");
@@ -30,15 +25,31 @@ const App = () => {
   return (
     <div>
       <header>
-        <h1>Product List</h1>
-      </header>
+  <h2>Flop<span>Market</span></h2>
+  <div>
+    <h2 className="SignIn">SignIn</h2>
+    <h2 className="SignUp">SignUp</h2>
+  </div>
+</header>
+<div className="container">
+<div className="intro">
+<h2>Flop<span>Market</span></h2>
+<p className="lorem">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectuso eaque  natus. Ipsam aliquam dolor nihil laborum ducimus, reprehenderit nemo expedita, incidunt dolorum, quaerat laboriosam. dolor sit amet consectetur adipisicing elit. Delectus rerum optio tenetur, distinctio eaque doloremque ad natus. Ipsam aliquam dolor nihil laborum ducimus, reprehenderit nemo expedita, incidunt dolorum, quaerat laboriosam.</p>
+</div>
 
+<div className="catagory">
       {/* ==========================  Proups =============== */}
       <ProductList
         products={filteredProducts}
         activeFilter={activeFilter}
         onFilterChange={handleFilterChange}
       />
+      </div>
+    </div>
+    <footer class="footer">
+  <h3>Let's Connect ::</h3>
+</footer>
+
     </div>
   );
 };

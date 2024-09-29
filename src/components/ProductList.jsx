@@ -4,7 +4,7 @@ import './style.css';
 
 const ProductList = ({ products, activeFilter, onFilterChange }) => {
   return (
-    <div>
+    <div className="filter">
       {/* Filter Section */}
       <section id="filter-section">
         <p className="Filter_category">Filter Products</p>
@@ -35,22 +35,24 @@ const ProductList = ({ products, activeFilter, onFilterChange }) => {
       </section>
 
    {/* =====================print ================== */}
-      <section id="product-display-area">
-        {products.length > 0 ?
-         (
-          products.map((product, index) => (
-            <div key={index} className="product-item">
-              <h2>{product.name}</h2>
-              <p>Category: {product.category}</p>
-              <p>Price: ${product.price}</p>
-              <p className="onlyItem">{product.only}</p>
-              <p className="ShowMore">Show More .. </p>
-            </div>
-          ))
-        ) : (
-          <p>No products found.</p>
-        )}
-      </section>
+   <section id="product-display-area">
+  {products.length > 0 ? (
+    
+    products.map((product, index) => (
+       
+      <div key={index} className="testimonial-card product-item">
+        <h2>{product.name}</h2>
+        <p>Category: {product.category}</p>
+        <p>Price: ${product.price}</p>
+        <p className="onlyItem">{product.only}</p>
+        <p className="ShowMore">Show More .. </p>
+      </div>
+    ))
+  ) : (
+    <p>No products found.</p>
+  )}
+</section>
+
     </div>
   );
 };
