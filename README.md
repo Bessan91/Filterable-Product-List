@@ -7,9 +7,3 @@
       <img width="932" alt="image" src="https://github.com/user-attachments/assets/a0705f58-4121-4bee-b501-7cc0c3a76420">
 </ul>
 
-
-</ui>
-</ul > show all details in vedio -->
- 
-
-</ui>
